@@ -79,6 +79,18 @@ int main () {
 		
 		QUNIT_IS_EQUAL (myStack.isEmpty (), true);
 	}
+
+	// UNIT TEST 5
+	// Make sure that the stack can handle strings
+	{
+		Stack <std :: string> myStack;
+		myStack.push ("Hello");
+		myStack.push ("World");
+		QUNIT_IS_EQUAL (myStack.pop (), "World");
+		QUNIT_IS_EQUAL (myStack.pop (), "Hello");
+	}
+
+	// UNIT TEST 6
 }
 
 #endif

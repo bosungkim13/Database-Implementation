@@ -58,7 +58,7 @@ public:
 	// if the stack is empty, the behavior is undefined
 	Data pop () { 
 		if (isEmpty()) {
-			return nullptr;
+			throw std::runtime_error("Stack is empty");
 		}
 		Node <Data> *temp = head;
 		head = head->getNext();
